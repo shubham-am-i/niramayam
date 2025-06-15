@@ -209,7 +209,7 @@ const Services = () => {
 
   const handleBookService = (serviceName) => {
     const message = `I'm interested in the ${serviceName}. Can you provide more details about scheduling and availability?`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/9382549541?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (

@@ -7,7 +7,7 @@ const Hero = () => {
   };
 
   const handleBookClass = () => {
-    window.open('https://wa.me/919876543210?text=I%20would%20like%20to%20book%20a%20yoga%20class', '_blank');
+    window.open('https://wa.me/9382549541?text=I%20would%20like%20to%20book%20a%20yoga%20class', '_blank');
   };
 
   return (

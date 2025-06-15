@@ -48,7 +48,7 @@ const Contact = () => {
 
   const handleWhatsApp = () => {
     const message = `Hi! I'm interested in learning more about your yoga programs. Can you please provide more information?`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/9382549541?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const contactInfo = [
@@ -308,7 +308,7 @@ const Contact = () => {
                     <span>Chat on WhatsApp</span>
                   </button>
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+9382549541"
                     className="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium smooth-transition flex items-center justify-center space-x-2"
                   >
                     <PhoneIcon className="w-5 h-5" />

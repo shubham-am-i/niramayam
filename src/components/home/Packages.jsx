@@ -92,7 +92,7 @@ const Packages = () => {
 
   const handleBookClass = (packageTitle) => {
     const message = `I'm interested in the ${packageTitle} yoga program. Can you provide more details?`;
-    window.open(`https://wa.me/919876543210?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/9382549541?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   return (

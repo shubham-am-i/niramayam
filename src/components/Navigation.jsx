@@ -29,7 +29,7 @@ const Navigation = () => {
   }, []);
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919876543210', '_blank');
+    window.open('https://wa.me/9382549541', '_blank');
   };
 
   return (
