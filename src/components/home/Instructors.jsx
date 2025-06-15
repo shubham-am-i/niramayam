@@ -76,7 +76,7 @@ const Instructors = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-8 mx-auto w-full" style={{maxWidth: '900px'}}>
-            {instructors.map((instructor, index) => (
+            {instructors.map((instructor) => (
               <motion.div
                 key={instructor.name}
                 variants={cardVariants}

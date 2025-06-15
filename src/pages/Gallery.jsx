@@ -103,7 +103,8 @@ const Gallery = () => {
       id: 1,
       title: "Daily Morning Practice",
       thumbnail: "https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=400",
-      description: "Start your day with this energizing 20-minute sequence"
+      description: "Start your day with this energizing 20-minute sequence",
+      youtubeId: "_8WITHX5zUw"
     },
     {
       id: 2,
@@ -262,7 +263,7 @@ const Gallery = () => {
                 Video Highlights
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Experience the energy and serenity of our yoga sessions through 
+                Experience the energy and serenity yoga through 
                 these carefully curated video highlights.
               </p>
             </div>
@@ -276,18 +277,33 @@ const Gallery = () => {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl smooth-transition group"
                 >
-                  <div className="relative">
-                    <img
-                      src={video.thumbnail}
-                      alt={video.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 smooth-transition">
-                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 smooth-transition">
-                        <div className="w-0 h-0 border-l-[20px] border-l-primary-600 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+                  {video.youtubeId ? (
+                    <div className="relative w-full h-48 md:h-64 flex items-center justify-center bg-black">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src={`https://www.youtube.com/embed/${video.youtubeId}`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="w-full h-48 md:h-64 object-cover rounded-t-lg"
+                      ></iframe>
+                    </div>
+                  ) : (
+                    <div className="relative">
+                      <img
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 smooth-transition"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 smooth-transition">
+                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 smooth-transition">
+                          <div className="w-0 h-0 border-l-[20px] border-l-primary-600 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent ml-1"></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">
                       {video.title}
