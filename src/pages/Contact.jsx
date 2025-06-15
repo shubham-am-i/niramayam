@@ -31,9 +31,25 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      alert('Thank you for your message! We will get back to you soon.');
+    try {
+      // Construct a formatted message with all form data
+      const formattedMessage = `
+*I am ready to begin my yoga journey with you. Let's discuss*
+
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Subject:* ${formData.subject}
+*Interested In:* ${formData.interestedIn}
+
+*Message:*
+${formData.message}
+`;
+      
+      // Open WhatsApp with the form data
+      window.open(`https://wa.me/9382549541?text=${encodeURIComponent(formattedMessage)}`, '_blank');
+      
+      // Reset form after opening WhatsApp
       setFormData({
         name: '',
         email: '',
@@ -42,8 +58,9 @@ const Contact = () => {
         message: '',
         interestedIn: ''
       });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleWhatsApp = () => {
