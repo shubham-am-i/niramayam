@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { StarIcon } from '@heroicons/react/24/solid';
+import mentor1 from '../../assets/images/mentor1.png';
+import mentor2 from '../../assets/images/mentor2.png';
 
 const Instructors = () => {
   const ref = useRef(null);
@@ -9,32 +11,23 @@ const Instructors = () => {
 
   const instructors = [
     {
-      name: "Guru Ananda Saraswati",
+      name: "Saikat",
       title: "Founder & Master Teacher",
-      experience: "25+ Years",
-      image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=400",
-      specialties: ["Hatha Yoga", "Meditation", "Pranayama", "Yoga Philosophy"],
-      bio: "Trained in traditional Himalayan yoga, Guru Ananda brings ancient wisdom to modern practice.",
+      experience: "7+ Years",
+      image: mentor1,
+      specialties: ["Hatha Yoga", "Meditation", "Pranayama", "Yoga Philosophy", "Mindfulness"],
+      bio: "Trained in traditional Himalayan yoga, Saikat brings ancient wisdom to modern practice.",
       certifications: ["RYT-500", "Traditional Himalayan Yoga", "Vedic Philosophy"]
     },
     {
-      name: "Priya Sharma",
+      name: "Chinmay",
       title: "Senior Instructor",
-      experience: "15+ Years",
-      image: "https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=400",
+      experience: "7+ Years",
+      image: mentor2,
       specialties: ["Vinyasa Flow", "Yin Yoga", "Therapeutic Yoga"],
-      bio: "Specializes in therapeutic yoga and has helped hundreds overcome physical limitations.",
+      bio: "Specializes in therapeutic yoga and has helped 40+ overcome physical limitations.",
       certifications: ["RYT-200", "Yoga Therapy", "Ayurveda Consultant"]
     },
-    {
-      name: "Arjun Patel",
-      title: "Meditation Guide",
-      experience: "20+ Years",
-      image: "https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=400",
-      specialties: ["Meditation", "Mindfulness", "Stress Management"],
-      bio: "Expert in various meditation techniques and mindfulness practices for modern life.",
-      certifications: ["Certified Meditation Teacher", "Mindfulness Coach", "Stress Management Specialist"]
-    }
   ];
 
   const containerVariants = {
@@ -71,7 +64,7 @@ const Instructors = () => {
               variants={cardVariants}
               className="text-4xl md:text-5xl font-bold gradient-text mb-6"
             >
-              Meet Your Guides
+              Meet Your Mentors
             </motion.h2>
             <motion.p
               variants={cardVariants}
@@ -82,12 +75,12 @@ const Instructors = () => {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-8 mx-auto w-full" style={{maxWidth: '900px'}}>
             {instructors.map((instructor, index) => (
               <motion.div
                 key={instructor.name}
                 variants={cardVariants}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-xl smooth-transition group"
+                className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-xl smooth-transition group flex-1 min-w-[300px] max-w-[350px]"
               >
                 <div className="relative overflow-hidden">
                   <img

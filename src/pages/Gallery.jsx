@@ -2,6 +2,18 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
+import img1 from '../assets/images/1.jpeg';
+import img2 from '../assets/images/2.jpeg';
+import img3 from '../assets/images/3.jpeg';
+import img4 from '../assets/images/4.jpeg';
+import img5 from '../assets/images/5.jpeg';
+import img6 from '../assets/images/6.jpeg';
+import img7 from '../assets/images/7.jpeg';
+import img8 from '../assets/images/8.png';
+import img9 from '../assets/images/9.png';
+import img10 from '../assets/images/10.png';
+import img11 from '../assets/images/11.png';
+
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -9,88 +21,81 @@ const Gallery = () => {
   const images = [
     {
       id: 1,
-      src: "https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=800",
+      src: img1,
       category: "classes",
-      title: "Hatha Yoga Session",
-      description: "Students practicing traditional Hatha yoga postures"
+      title: "Yoga Class 1",
+      description: "Experience the essence of yoga practice."
     },
     {
       id: 2,
-      src: "https://images.pexels.com/photos/3822187/pexels-photo-3822187.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "meditation",
-      title: "Meditation Circle",
-      description: "Group meditation session in our peaceful studio"
+      src: img2,
+      category: "classes",
+      title: "Yoga Class 2",
+      description: "Harmony and balance in every pose."
     },
     {
       id: 3,
-      src: "https://images.pexels.com/photos/3823488/pexels-photo-3823488.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "classes",
-      title: "Vinyasa Flow",
-      description: "Dynamic flowing sequence connecting breath and movement"
+      src: img3,
+      category: "meditation",
+      title: "Meditation Session",
+      description: "Guided meditation for inner peace."
     },
     {
       id: 4,
-      src: "https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=800",
+      src: img4,
       category: "retreat",
-      title: "Outdoor Retreat",
-      description: "Yoga practice in nature during our weekend retreat"
+      title: "Yoga Retreat",
+      description: "A peaceful escape to deepen your practice."
     },
     {
       id: 5,
-      src: "https://images.pexels.com/photos/3823490/pexels-photo-3823490.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "kids",
-      title: "Kids Yoga Fun",
-      description: "Children enjoying playful yoga poses and games"
+      src: img5,
+      category: "workshop",
+      title: "Yoga Workshop",
+      description: "Learn advanced techniques from experts."
     },
     {
       id: 6,
-      src: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "classes",
-      title: "Pranayama Practice",
-      description: "Learning ancient breathing techniques for wellness"
+      src: img6,
+      category: "event",
+      title: "Special Event",
+      description: "Celebrating yoga and community."
     },
     {
       id: 7,
-      src: "https://images.pexels.com/photos/3823486/pexels-photo-3823486.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "seniors",
-      title: "Golden Years Yoga",
-      description: "Gentle yoga practice designed for senior practitioners"
+      src: img7,
+      category: "asana",
+      title: "Asana Practice",
+      description: "Perfecting postures with guidance."
     },
     {
       id: 8,
-      src: "https://images.pexels.com/photos/3786233/pexels-photo-3786233.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "meditation",
-      title: "Sunrise Meditation",
-      description: "Early morning meditation practice at our studio"
+      src: img8,
+      category: "asana",
+      title: "Asana Flow",
+      description: "Flowing through classic asanas."
     },
     {
       id: 9,
-      src: "https://images.pexels.com/photos/3823491/pexels-photo-3823491.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "retreat",
-      title: "Mountain Retreat",
-      description: "Peaceful yoga session during our Himalayan retreat"
+      src: img9,
+      category: "class",
+      title: "Yoga Class 3",
+      description: "A vibrant group yoga session."
     },
     {
       id: 10,
-      src: "https://images.pexels.com/photos/3822186/pexels-photo-3822186.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "classes",
-      title: "Therapeutic Yoga",
-      description: "Specialized session for back pain relief"
+      src: img10,
+      category: "meditation",
+      title: "Meditation Group",
+      description: "Collective mindfulness and relaxation."
     },
     {
       id: 11,
-      src: "https://images.pexels.com/photos/3823492/pexels-photo-3823492.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "workshops",
-      title: "Philosophy Workshop",
-      description: "Deep dive into ancient yoga philosophy and texts"
+      src: img11,
+      category: "workshop",
+      title: "Workshop Moments",
+      description: "Capturing the spirit of learning."
     },
-    {
-      id: 12,
-      src: "https://images.pexels.com/photos/3822185/pexels-photo-3822185.jpeg?auto=compress&cs=tinysrgb&w=800",
-      category: "classes",
-      title: "Restorative Yoga",
-      description: "Deeply relaxing poses for stress relief and healing"
-    }
   ];
 
   const videos = [
@@ -336,10 +341,18 @@ const Gallery = () => {
               <ChevronRightIcon className="w-6 h-6" />
             </button>
 
-            {/* Image Info */}
-            <div className="absolute bottom-4 left-4 right-4 bg-black/50 text-white p-4 rounded-lg">
-              <h3 className="text-xl font-semibold mb-2">{selectedImage.title}</h3>
-              <p className="text-gray-200">{selectedImage.description}</p>
+            {/* Image Info - mobile: above image, desktop: overlay */}
+            <div>
+              {/* Mobile (block above image) */}
+              <div className="block md:hidden mb-4 w-full max-w-xs mx-auto bg-black/80 text-white p-4 rounded-lg shadow-lg z-10 text-center">
+                <h3 className="text-lg font-semibold mb-1">{selectedImage.title}</h3>
+                <p className="text-sm text-gray-200">{selectedImage.description}</p>
+              </div>
+              {/* Desktop (overlay on image) */}
+              <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 bottom-8 w-[90vw] max-w-2xl bg-black/60 text-white p-4 rounded-lg shadow-lg pointer-events-auto z-10 flex-col items-center">
+                <h3 className="text-xl font-semibold mb-2 text-center">{selectedImage.title}</h3>
+                <p className="text-base text-gray-200 text-center">{selectedImage.description}</p>
+              </div>
             </div>
           </div>
         </motion.div>

@@ -58,11 +58,16 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`relative px-3 py-2 text-sm font-medium smooth-transition ${
-                  location.pathname === item.path
-                    ? 'text-white dark:text-primary-400'
-                    : 'text-white dark:text-gray-300 hover:text-white dark:hover:text-primary-400'
-                }`}
+                className={`relative px-3 py-2 text-sm font-medium smooth-transition 
+                  ${theme === 'light' ?
+                    (location.pathname === item.path
+                      ? 'text-primary-700 border-b-2 border-primary-600'
+                      : 'text-primary-700 hover:text-primary-900')
+                    : (location.pathname === item.path
+                      ? 'text-primary-400'
+                      : 'text-gray-300 hover:text-primary-400')
+                  }
+                `}
               >
                 {item.name}
                 {location.pathname === item.path && (
@@ -100,7 +105,10 @@ const Navigation = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-md text-white dark:text-gray-300"
+              className={`md:hidden p-2 rounded-md 
+                ${theme === 'light' ? (scrolled ? 'text-gray-700' : 'text-white') : 'text-white'} 
+                dark:text-gray-300`}
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? (
                 <XMarkIcon className="w-6 h-6" />
