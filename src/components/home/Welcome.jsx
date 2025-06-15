@@ -47,7 +47,7 @@ const Welcome = () => {
             variants={itemVariants}
             className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            At Yoga Sanctuary, we honor the ancient traditions of yoga while making them 
+            At Niramayam, we honor the ancient traditions of yoga while making them 
             accessible to modern practitioners. Our approach is rooted in the rich heritage 
             of Indian philosophy, combining traditional asanas with contemporary understanding 
             of wellness.

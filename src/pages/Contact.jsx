@@ -356,7 +356,7 @@ const Contact = () => {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Yoga Sanctuary Location"
+                  title="Niramayam Location"
                 ></iframe>
               </div>
               <div className="p-6">

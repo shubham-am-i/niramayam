@@ -44,7 +44,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">🕉</span>
               </div>
-              <span className="text-xl font-bold">Yoga Sanctuary</span>
+              <span className="text-xl font-bold">Niramayam</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Ancient wisdom meets modern practice. Transform your life through the 
@@ -130,7 +130,7 @@ const Footer = () => {
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-1 text-gray-400 text-sm">
-              <span>© {currentYear} Yoga Sanctuary. Made with</span>
+              <span>© {currentYear} Niramayam. Made with</span>
               <HeartIcon className="w-4 h-4 text-red-500" />
               <span>in India</span>
             </div>

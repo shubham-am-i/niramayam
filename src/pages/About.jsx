@@ -29,7 +29,7 @@ const About = () => {
     },
     {
       year: "2008",
-      title: "Yoga Sanctuary Founded",
+      title: "Niramayam Founded",
       description: "Established with a vision to share authentic yoga teachings",
       icon: "🏛️"
     },
@@ -105,7 +105,7 @@ const About = () => {
             </h1>
             <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
               Rooted in ancient wisdom, blossoming in modern times. 
-              Discover the story behind Yoga Sanctuary and our mission to 
+              Discover the story behind Niramayam and our mission to 
               transform lives through authentic yoga practice.
             </p>
           </motion.div>

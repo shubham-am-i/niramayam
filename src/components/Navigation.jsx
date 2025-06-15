@@ -49,7 +49,7 @@ const Navigation = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">🕉</span>
             </div>
-            <span className="text-xl font-bold gradient-text">Yoga Sanctuary</span>
+            <span className="text-xl font-bold gradient-text">Niramayam</span>
           </Link>
 
           {/* Desktop Navigation */}

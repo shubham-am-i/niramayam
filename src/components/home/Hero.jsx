@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import localVideo from '../../assets/videos/background.mp4'
 const Hero = () => {
   const scrollToContent = () => {
@@ -64,7 +63,7 @@ const Hero = () => {
             className="my-8 text-center" // Removed absolute, added margin
           >
             <blockquote className="text-primary-300 text-2xl italic mb-2 drop-shadow-sm">
-              "सर्वे भवन्तु सुखिन:"
+              &quot;सर्वे भवन्तु सुखिन:&quot;
             </blockquote>
             <p className="text-gray-200 text-lg drop-shadow-sm">May all beings be happy</p>
           </motion.div>

@@ -15,7 +15,7 @@ const Testimonials = () => {
       age: 45,
       location: "Mumbai",
       image: "https://images.pexels.com/photos/3786233/pexels-photo-3786233.jpeg?auto=compress&cs=tinysrgb&w=300",
-      text: "Yoga Sanctuary transformed my life. The authentic teachings helped me overcome chronic back pain and find inner peace. The instructors truly understand the depth of yoga philosophy.",
+      text: "Niramayam transformed my life. The authentic teachings helped me overcome chronic back pain and find inner peace. The instructors truly understand the depth of yoga philosophy.",
       rating: 5,
       condition: "Back Pain Relief"
     },
