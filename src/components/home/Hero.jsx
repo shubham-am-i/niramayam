@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-
+import localVideo from '../../assets/videos/background.mp4'
 const Hero = () => {
   const scrollToContent = () => {
     const element = document.getElementById('welcome');
@@ -22,9 +22,9 @@ const Hero = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://player.vimeo.com/external/373169856.sd.mp4?s=5e7bd4a5c2b8b4a5e7bd4a5c2b8b4" type="video/mp4" />
+          <source src={localVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 video-overlay"></div>
+        <div className="absolute inset-0 video-overlay" style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}></div>
       </div>
 
       {/* Content */}
@@ -41,9 +41,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
           >
-            Welcome to Your
-            <span className="block gradient-text text-primary-400">
-              Yoga Journey
+            Discover Inner Peace
+            <span className="block gradient-text text-primary-300">
+              Through Ancient Wisdom
             </span>
           </motion.h1>
 
@@ -51,17 +51,28 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed"
+            className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed drop-shadow-sm"
           >
-            Discover the ancient wisdom of yoga rooted in Indian tradition.
-            <br className="hidden sm:block" />
             Transform your mind, body, and spirit through sacred practice.
           </motion.p>
+
+          {/* Sanskrit Quote - Moved and styles adjusted */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1 }} // Adjusted delay might be needed
+            className="my-8 text-center" // Removed absolute, added margin
+          >
+            <blockquote className="text-primary-300 text-2xl italic mb-2 drop-shadow-sm">
+              "सर्वे भवन्तु सुखिन:"
+            </blockquote>
+            <p className="text-gray-200 text-lg drop-shadow-sm">May all beings be happy</p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.6 }} // Original delay, might need adjustment based on quote's new position
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <button
@@ -78,7 +89,7 @@ const Hero = () => {
             </button>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -86,24 +97,11 @@ const Hero = () => {
           >
             <p className="text-primary-400 font-medium mb-2">1 Month Free Trial</p>
             <p className="text-gray-300">Then ₹999/month • Cancel anytime</p>
-          </motion.div>
-        </motion.div>
-
-        {/* Sanskrit Quote */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="absolute bottom-20 left-1/2 transform -translate-x-1/2 text-center"
-        >
-          <blockquote className="text-primary-400 text-lg italic mb-2">
-            "सर्वे भवन्तु सुखिन:"
-          </blockquote>
-          <p className="text-gray-300 text-sm">May all beings be happy</p>
+          </motion.div> */}
         </motion.div>
 
         {/* Scroll Indicator */}
-        <motion.button
+        {/* <motion.button
           onClick={scrollToContent}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -111,7 +109,7 @@ const Hero = () => {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
         >
           <ChevronDownIcon className="w-8 h-8 text-white" />
-        </motion.button>
+        </motion.button> */}
       </div>
     </section>
   );

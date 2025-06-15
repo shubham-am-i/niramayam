@@ -60,8 +60,8 @@ const Navigation = () => {
                 to={item.path}
                 className={`relative px-3 py-2 text-sm font-medium smooth-transition ${
                   location.pathname === item.path
-                    ? 'text-primary-600 dark:text-primary-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400'
+                    ? 'text-white dark:text-primary-400'
+                    : 'text-white dark:text-gray-300 hover:text-white dark:hover:text-primary-400'
                 }`}
               >
                 {item.name}
@@ -100,7 +100,7 @@ const Navigation = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300"
+              className="md:hidden p-2 rounded-md text-white dark:text-gray-300"
             >
               {isOpen ? (
                 <XMarkIcon className="w-6 h-6" />
